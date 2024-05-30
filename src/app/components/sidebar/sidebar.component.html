@@ -1,0 +1,19 @@
+<div class="sidebar">
+  <div class="sidebar-header mb-2">
+    <h5 class="d-none d-md-block">Menu</h5>
+  </div>
+  <ul class="nav flex-column">
+    @for (menu of menuArray; track $index) {
+    <li class="nav-item">
+      <a
+        class="nav-link d-flex align-items-center gap-2"
+        [routerLink]="menu.routingName"
+        routerLinkActive="activeRouter"
+      >
+        <fa-icon [icon]="menu.iconName" [class]="menu?.className"></fa-icon>
+        <span class="d-none d-md-block">{{ menu.tabName }}</span></a
+      >
+    </li>
+    }
+  </ul>
+</div>

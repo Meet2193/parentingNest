@@ -1,0 +1,40 @@
+img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+.logOutBtn {
+  transition: all 0.5s;
+  border: 1px solid white;
+  padding: 7px 12px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+  color: white;
+}
+.logOutBtn::after {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  content: "";
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transform: scale(0);
+  transition: all ease-in-out 0.5s;
+}
+.logOutBtn:hover {
+  transform: scale(1.2);
+  color: black;
+}
+.logOutBtn:hover::after {
+  transform: scale(6);
+}
+.header-title {
+  font-family: "Caveat", cursive;
+  letter-spacing: 2px;
+}
