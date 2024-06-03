@@ -1,9 +1,22 @@
 .main-dashboard {
-  margin-left: 250px;
+  margin-left: 230px;
   margin-top: 86px;
+  border-top: 1px solid #3e4f62;
+  position: fixed;
+  width: calc(100vw - 230px);
+  height: calc(100vh - 86px);
+  padding: 2rem;
+  background-color: #162a41;
+  border-top-left-radius: 30px;
+  box-shadow: inset 0 3px 4px #0000001a;
+  color: white;
+  overflow-y: auto;
+  height: 100%;
 }
 @media only screen and (max-width: 767px) {
   .main-dashboard {
     margin-left: 50px;
+    margin-top: 113px;
+    width: calc(100vw - 50px);
   }
 }

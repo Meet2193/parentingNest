@@ -1,0 +1,20 @@
+.layout-footer {
+  padding: 1rem 0rem 3rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.layout-footer .footer-start img {
+  width: 2rem;
+}
+.layout-footer .footer-start .app-name {
+  margin-left: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 0.9px;
+}
+.footer-end {
+  font-family: "Caveat", cursive;
+  letter-spacing: 2px;
+}

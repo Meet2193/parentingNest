@@ -14,7 +14,7 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 export const routes: Routes = [
   {
     path: '',
-    component: LoginComponent,
+    component: HomeComponent,
   },
   {
     path: 'login',

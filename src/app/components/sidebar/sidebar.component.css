@@ -1,7 +1,7 @@
 .sidebar {
-  width: 250px;
+  width: 230px;
   height: 100vh;
-  background-color: #333;
+  /* background-color: #333; */
   color: #fff;
   padding: 20px;
   /* position: fixed;
@@ -42,6 +42,8 @@
   text-decoration: none;
   cursor: pointer;
   overflow: hidden;
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 0.9px;
 }
 
 .nav-link:focus {
@@ -61,6 +63,11 @@
 .activeRouter {
   color: black !important;
   background-color: #fff !important;
+}
+
+.menu-title {
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 0.9px;
 }
 
 @media only screen and (max-width: 767px) {

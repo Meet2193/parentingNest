@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { Component, PLATFORM_ID, inject } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,4 +8,8 @@ import { RouterModule, RouterOutlet } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  platform_id = inject(PLATFORM_ID);
+  getToken = true;
+  isLogin = this.getToken ? 'Log Out ' : 'Login';
+}

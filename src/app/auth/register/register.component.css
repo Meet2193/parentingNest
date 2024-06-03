@@ -1,0 +1,17 @@
+.regsiter-title {
+  font-family: "Caveat", cursive;
+  letter-spacing: 2px;
+  font-size: 25px;
+}
+label {
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 0.9px;
+}
+.h-full {
+  height: 100vh;
+}
+@media only screen and (max-width: 767px) {
+  .regsiter-title {
+    font-size: 15px;
+  }
+}
