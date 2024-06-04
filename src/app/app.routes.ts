@@ -10,6 +10,7 @@ import { ParentingTipsComponent } from './pages/parenting-tips/parenting-tips.co
 import { ProductReviewsComponent } from './pages/product-reviews/product-reviews.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
 
 export const routes: Routes = [
   {
@@ -45,23 +46,27 @@ export const routes: Routes = [
     canActivate: [authGuard],
   },
   {
-    path: 'parenting-tips',
+    path: 'tips',
     component: ParentingTipsComponent,
     canActivate: [authGuard],
   },
   {
-    path: 'product-reviews',
+    path: 'reviews',
     component: ProductReviewsComponent,
     canActivate: [authGuard],
   },
   {
-    path: 'about-us',
+    path: 'about',
     component: AboutUsComponent,
     canActivate: [authGuard],
   },
   {
-    path: 'contact-us',
+    path: 'contact',
     component: ContactUsComponent,
     canActivate: [authGuard],
+  },
+  {
+    path: 'blog/:id',
+    component: BlogDetailComponent,
   },
 ];

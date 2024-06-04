@@ -10,6 +10,7 @@ import {
   faRankingStar,
   faAddressCard,
   faHeadset,
+  IconDefinition,
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -20,49 +21,56 @@ import {
   styleUrl: './sidebar.component.css',
 })
 export class SidebarComponent {
-  menuArray = [
+  menuList: MenuTab[] = [
     {
-      routingName: '/home',
-      iconName: faHome,
-      tabName: 'Home',
+      route: '/home',
+      icon: faHome,
+      title: 'Home',
     },
     {
-      routingName: '/pregnancy',
-      iconName: faPersonPregnant,
-      tabName: 'Prgenancy',
-      className: 'fs-2',
+      route: '/pregnancy',
+      icon: faPersonPregnant,
+      title: 'Prgenancy',
+      class: 'fs-4',
     },
     {
-      routingName: '/newborn-care',
-      iconName: faHandsHoldingChild,
-      tabName: 'Newborn Care',
+      route: '/newborn-care',
+      icon: faHandsHoldingChild,
+      title: 'Newborn Care',
     },
     {
-      routingName: '/baby',
-      iconName: faBaby,
-      tabName: 'Baby',
-      className: 'fs-4',
+      route: '/baby',
+      icon: faBaby,
+      title: 'Baby',
+      class: 'fs-4',
     },
     {
-      routingName: '/parenting-tips',
-      iconName: faLightbulb,
-      tabName: 'Parenting Tips',
-      className: 'fs-4',
+      route: '/tips',
+      icon: faLightbulb,
+      title: 'Parenting Tips',
+      class: 'fs-4',
     },
     {
-      routingName: '/about-us',
-      iconName: faAddressCard,
-      tabName: 'About Us',
+      route: '/about',
+      icon: faAddressCard,
+      title: 'About Us',
     },
     {
-      routingName: '/product-reviews',
-      iconName: faRankingStar,
-      tabName: 'Product Reviews',
+      route: '/reviews',
+      icon: faRankingStar,
+      title: 'Product Reviews',
     },
     {
-      routingName: '/contact-us',
-      iconName: faHeadset,
-      tabName: 'Contact Us',
+      route: '/contact',
+      icon: faHeadset,
+      title: 'Contact Us',
     },
   ];
+}
+
+export interface MenuTab {
+  route: string;
+  icon: IconDefinition;
+  title: string;
+  class?: string;
 }

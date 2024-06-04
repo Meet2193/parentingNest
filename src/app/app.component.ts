@@ -5,6 +5,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { CommonModule, Location, isPlatformBrowser } from '@angular/common';
 import { filter } from 'rxjs';
 import { FooterComponent } from './components/footer/footer.component';
+import { BlogListService } from './service/blog-list.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +17,9 @@ import { FooterComponent } from './components/footer/footer.component';
     SidebarComponent,
     CommonModule,
     FooterComponent,
+    HttpClientModule,
   ],
+  providers: [BlogListService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -45,7 +49,7 @@ export class AppComponent {
               ? this.currentUrl
               : this.currentUrl.split('/').pop() || '';
           this.authComponents = this.components.includes(lastSegment);
-          console.log('authComponents', lastSegment);
+          // console.log('authComponents', lastSegment);
         }
       });
   }

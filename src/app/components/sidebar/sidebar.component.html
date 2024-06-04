@@ -3,15 +3,15 @@
     <h5 class="d-none d-md-block menu-title">Menu</h5>
   </div>
   <ul class="nav flex-column">
-    @for (menu of menuArray; track $index) {
+    @for (menu of menuList; track $index) {
     <li class="nav-item">
       <a
         class="nav-link d-flex align-items-center gap-2"
-        [routerLink]="menu.routingName"
+        [routerLink]="menu.route"
         routerLinkActive="activeRouter"
       >
-        <fa-icon [icon]="menu.iconName" [class]="menu?.className"></fa-icon>
-        <span class="d-none d-md-block text-nowrap">{{ menu.tabName }}</span></a
+        <fa-icon [icon]="menu.icon" [class]="menu?.class"></fa-icon>
+        <span class="d-none d-md-block text-nowrap">{{ menu.title }}</span></a
       >
     </li>
     }

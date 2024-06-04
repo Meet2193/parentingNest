@@ -1,0 +1,13 @@
+.blogHeader {
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 0.9px;
+}
+.userAvatar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+.banner-mage {
+  object-fit: cover;
+  border-radius: 6px;
+}
